@@ -1,3 +1,9 @@
+/*
+- the policy class represents an insurance policy for a placeholder
+- it includes attributes like the policy #, provider name, personal details
+- and methods to calc bmi and insurance price
+*/
+
 
 // name the class
 public class Policy
@@ -30,7 +36,7 @@ include the following attributes:
 */
 
 
-// attreibutes (fields)
+// attributes (fields)
    private String policyNumber;
    private String providerName;
    private String firstName;
@@ -56,7 +62,18 @@ public Policy() {
 }
 
 
-// constructor that accepts arguments to initialize the object!
+/* 
+- constructor that accepts arguments to initialize the object!
+- @param policyNumber the unique indentifier for the policy
+- @param providerName the name of the insurance provider
+- @param firstName the first name of the policyholder
+- @param lastName the last name of the policyholder
+- @param policyholderLastName the last name of the policyholder for this policy
+- @param age the age of the policyholder
+- @param smokingStatus the smoking status of the policyholder ("smoker" or "non-smoker")
+- @param height The height of the policyholder in inches
+- @param weight the weight of the policyholder in pounds
+*/
 public Policy(String policyNumber, String providerName, String firstName, String lastName, 
               String policyholderLastName, int age, String smokingStatus, int height, int weight) {
         this.policyNumber = policyNumber;
@@ -72,76 +89,150 @@ public Policy(String policyNumber, String providerName, String firstName, String
 
 
 // getters (aka accessor methods)
+
+/*
+- gets the policy number
+- @return the policy number
+*/
 public String getPolicyNumber() {
    return policyNumber;
 }
 
+/*
+- gets the provider name
+- @return the provider name
+*/
 public String getProviderName() {
    return providerName;
 }
 
+/*
+- gets the first name of the policyholder
+- @return the first name
+*/
 public String getFirstName() {
    return firstName;
 }
 
+/*
+- gets the last name of the policyholder
+- @return the last name
+*/
 public String getLastName() {
    return lastName;
 }
 
+/*
+- gets policyholder's last name
+- @return the policyholder's last name
+*/
 public String getPolicyholderLastName() {
    return policyholderLastName;
 }
 
+/*
+- gets the age of the policyholder
+- @return the age
+*/
 public int getAge() {
    return age;
 }
 
+/*
+- gets the smoking status of the policyholder ("smoker" or "non-smoker")
+- @return the smoking status
+*/
 public String getSmokingStatus() {
    return smokingStatus;
 }
 
+/*
+- gets the height of the policyholder in inches
+- @return the height in inches
+*/
 public int getHeight() {
    return height;
 }
 
+/*
+- gets the weight of the policyholder in pounds
+- @return the weight in pounds
+*/
 public int getWeight() {
    return weight;
 }
 
 
 // setters (aka mutator methods)
+
+/*
+- sets the policy number
+- @param policyNumber the unique identifier for the policy
+*/
 public void setPolicyNumber(String policyNumber) {
    this.policyNumber = policyNumber;
 }
 
+/*
+- sets the provider's name
+- @param providerName The name of the insurance provider
+*/
 public void setProviderName(String providerName) {
    this.providerName = providerName;
 }
 
+/*
+- sets first name of the policyholder
+- @param firstName the first name of the policyholder
+*/
 public void setFirstName(String firstName) {
    this.firstName = firstName;
 }
 
+/*
+- sets last name of the policyholder
+- @param lastName the first name of the policyholder
+*/
 public void setLastName(String lastName) {
    this.lastName = lastName;
 }
 
+/*
+- sets the policyholder's last name
+- @param policyholderLastName the policyholder's last name
+*/
 public void setPolicyholderLastName(String policyholderLastName) {
    this.policyholderLastName = policyholderLastName;
 }
 
+/*
+- sets the age of the policyholder
+- @param age the age of the policyholder
+*/
 public void setAge(int age) {
    this.age = age;
 }
 
+/*
+- sets the smoking status of the policyholder
+- @param smokingStatus the smoking status of the policyholder ("smoker" or "non-smoker")
+*/
 public void setSmokingStatus(String smokingStatus) {
    this.smokingStatus = smokingStatus;
 }
 
+/*
+- sets the height of the policyholder in inches
+- @param height the height of the policyholder in inches
+*/
 public void setHeight(int height) {
    this.height = height;
 }
 
+/*
+- sets the weight of the policyholder in pounds
+- @param weight the weight of the policyholder in pounds
+*/
 public void setWeight(int weight) {
    this.weight = weight;
 }
@@ -149,11 +240,19 @@ public void setWeight(int weight) {
 
 
 // method to calculate AND return the BMI of the policyholder
+/*
+- calculate the bmi (body mass index) of the policyholder
+- @return the calculated bmi of the policyholder
+*/
 public double calculateBMI() {
    return (weight * 703.0) / (height * height);
 } 
 
 // method to calculate and return the price of the insurance policy
+/*
+- calculates the price of the insurance policy based on various factors
+- @return the calculated price of the insurance policy
+*/
 public double calculatePrice() {
    double price = 600.0;
    
